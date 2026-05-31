@@ -64,7 +64,7 @@
 
   const a = document.createElement("a")
   a.href = URL.createObjectURL(content)
-  a.download = "website-assets.zip"
+  a.download = `${window.location.hostname}.zip`
   a.click()
 
   console.log("ZIP exported")
