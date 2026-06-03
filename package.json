@@ -1,0 +1,48 @@
+{
+  "name": "yoink",
+  "version": "1.0.0",
+  "description": "One-click web asset archiver — yoink every image, script, stylesheet, font, and media file from any webpage into a ZIP, straight from your browser console.",
+  "main": "script.js",
+  "files": [
+    "script.js",
+    "bookmarklet.js",
+    "bookmarklet.url.txt",
+    "build-bookmarklet.js",
+    "examples",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build:bookmarklet": "node build-bookmarklet.js",
+    "build": "node build-bookmarklet.js"
+  },
+  "keywords": [
+    "asset",
+    "archiver",
+    "bookmarklet",
+    "browser",
+    "console",
+    "devtools",
+    "download",
+    "jszip",
+    "scraper",
+    "web-archive",
+    "web-assets",
+    "yoink",
+    "zip"
+  ],
+  "author": "Alvin Indra <alvinindrap@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/alvinindra/script-download-web-assets#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvinindra/script-download-web-assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alvinindra/script-download-web-assets/issues"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
