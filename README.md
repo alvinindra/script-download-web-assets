@@ -178,8 +178,8 @@ Tested on Chrome, Firefox, Safari, and Edge (Chromium).
 
 ## Limitations
 
-- **CORS.** Cross-origin assets without permissive `Access-Control-Allow-Origin` headers will fail to fetch. They are logged and skipped — the rest of the archive still succeeds.
-- **Authentication.** Assets behind auth headers other than cookies may need adjustments to the `fetch()` call. The script sends `credentials: "include"` so cookie-based sessions work out of the box.
+- **CORS.** Cross-origin assets are fetched without credentials by default, which avoids conflicts with CDNs that respond with the `Access-Control-Allow-Origin: *` wildcard. Same-origin assets are fetched with `credentials: "include"` so cookie-gated content works. Assets that fail for any other reason (network error, 404, etc.) are logged and skipped.
+- **Authentication.** Same-origin assets are sent with `credentials: "include"` so cookie-based sessions work out of the box. Cross-origin assets use `credentials: "omit"` by default. If you need credentials for a specific cross-origin domain, you can modify the `fetchWithTimeout` function.
 - **Dynamic content.** Yoink captures what is observable at the moment it runs. If your page lazy-loads images on scroll, scroll first to ensure they're in the Performance buffer or DOM.
 - **Performance buffer.** Long-running SPAs can fill and overflow the resource timing buffer. Run Yoink shortly after page load, or call `performance.clearResourceTimings()` and reload if needed.
 - **Large pages.** Building the ZIP happens in memory. Archives of multi-hundred MB pages may stress the tab.

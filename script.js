@@ -143,11 +143,23 @@
     return safePath
   }
 
+  function isSameOrigin(url) {
+    try {
+      return new URL(url).origin === window.location.origin
+    } catch {
+      return false
+    }
+  }
+
   async function fetchWithTimeout(url, timeoutMs) {
+    const sameOrigin = isSameOrigin(url)
+    const credentials = sameOrigin ? "include" : "omit"
+
     const controller = new AbortController()
     const timer = setTimeout(() => controller.abort(), timeoutMs)
     try {
-      return await fetch(url, { signal: controller.signal, credentials: "include" })
+      const res = await fetch(url, { signal: controller.signal, credentials })
+      return res
     } finally {
       clearTimeout(timer)
     }
