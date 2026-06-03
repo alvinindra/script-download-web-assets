@@ -53,6 +53,6 @@ First named release. The project was rebranded from "script-download-web-assets"
   loads `JSZip` on demand from a CDN, and downloads a `website-assets.zip` archive.
 - Basic README describing the manual console workflow.
 
-[Unreleased]: https://github.com/alvinindra/script-download-web-assets/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/alvinindra/script-download-web-assets/releases/tag/v1.0.0
-[0.1.0]: https://github.com/alvinindra/script-download-web-assets/releases/tag/v0.1.0
+[Unreleased]: https://github.com/alvinindra/yoink/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/alvinindra/yoink/releases/tag/v1.0.0
+[0.1.0]: https://github.com/alvinindra/yoink/releases/tag/v0.1.0

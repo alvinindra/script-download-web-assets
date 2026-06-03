@@ -34,13 +34,13 @@
   ],
   "author": "Alvin Indra <alvinindrap@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/alvinindra/script-download-web-assets#readme",
+  "homepage": "https://github.com/alvinindra/yoink#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alvinindra/script-download-web-assets.git"
+    "url": "git+https://github.com/alvinindra/yoink.git"
   },
   "bugs": {
-    "url": "https://github.com/alvinindra/script-download-web-assets/issues"
+    "url": "https://github.com/alvinindra/yoink/issues"
   },
   "engines": {
     "node": ">=14"
